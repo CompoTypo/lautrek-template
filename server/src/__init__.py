@@ -1,0 +1,1 @@
+"""Lautrek Template Server."""
