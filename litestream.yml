@@ -1,0 +1,10 @@
+dbs:
+  - path: /data/productname.db
+    replicas:
+      - type: s3
+        bucket: $LITESTREAM_BUCKET
+        path: $LITESTREAM_PATH
+        endpoint: $LITESTREAM_ENDPOINT
+        access-key-id: $DB_ACCESS_KEY
+        secret-access-key: $DB_SECRET_KEY
+        sync-interval: 1s

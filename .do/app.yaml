@@ -1,0 +1,26 @@
+name: productname
+region: nyc
+services:
+  - name: server
+    dockerfile_path: Dockerfile
+    source_dir: /
+    github:
+      repo: your-org/your-repo
+      branch: main
+      deploy_on_push: true
+    http_port: 8080
+    instance_count: 1
+    instance_size_slug: apps-s-1vcpu-0.5gb
+    routes:
+      - path: /
+    envs:
+      - key: APP_ENVIRONMENT
+        value: production
+      - key: APP_DEBUG
+        value: "false"
+      - key: DB_PATH
+        value: /data/productname.db
+      - key: STRIPE_SECRET_KEY
+        type: SECRET
+      - key: STRIPE_WEBHOOK_SECRET
+        type: SECRET
