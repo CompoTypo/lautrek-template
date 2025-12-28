@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}{{ title }} | {{ app_name }} Docs{% endblock %}
+
+{% block content %}
+<div class="max-w-7xl mx-auto px-4 py-8">
+    <div class="grid grid-cols-12 gap-8">
+        <!-- Sidebar -->
+        <aside class="col-span-3">
+            <nav class="sticky top-24 space-y-6">
+                <div>
+                    <h3 class="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-3">Getting Started</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/docs/quickstart" class="block text-gray-600 dark:text-gray-400 hover:text-brand-500">Quick Start</a></li>
+                        <li><a href="/docs/installation" class="block text-gray-600 dark:text-gray-400 hover:text-brand-500">Installation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-3">API Reference</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/docs/api/authentication" class="block text-gray-600 dark:text-gray-400 hover:text-brand-500">Authentication</a></li>
+                        <li><a href="/docs/api/tools" class="block text-gray-600 dark:text-gray-400 hover:text-brand-500">Tools</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Content -->
+        <main class="col-span-9">
+            <h1 class="text-3xl font-bold mb-6">{{ title }}</h1>
+            {% block doc_content %}{% endblock %}
+        </main>
+    </div>
+</div>
+{% endblock %}

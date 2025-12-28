@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Documentation | {{ app_name }}{% endblock %}
+
+{% block content %}
+<section class="py-16 px-4">
+    <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold mb-4">Documentation</h1>
+            <p class="text-xl text-gray-600 dark:text-gray-300">Learn how to use {{ app_name }}</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6">
+            <a href="/docs/quickstart" class="p-6 bg-white dark:bg-surface-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-brand-500 transition">
+                <h3 class="text-xl font-semibold mb-2">Quick Start</h3>
+                <p class="text-gray-600 dark:text-gray-400">Get up and running in 5 minutes</p>
+            </a>
+            <a href="/docs/installation" class="p-6 bg-white dark:bg-surface-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-brand-500 transition">
+                <h3 class="text-xl font-semibold mb-2">Installation</h3>
+                <p class="text-gray-600 dark:text-gray-400">Install and configure the MCP adapter</p>
+            </a>
+            <a href="/docs/api/authentication" class="p-6 bg-white dark:bg-surface-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-brand-500 transition">
+                <h3 class="text-xl font-semibold mb-2">Authentication</h3>
+                <p class="text-gray-600 dark:text-gray-400">API keys and authentication</p>
+            </a>
+            <a href="/docs/api/tools" class="p-6 bg-white dark:bg-surface-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-brand-500 transition">
+                <h3 class="text-xl font-semibold mb-2">API Reference</h3>
+                <p class="text-gray-600 dark:text-gray-400">Complete tool reference</p>
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block title %}Pricing | {{ app_name }}{% endblock %}
+
+{% block content %}
+<section class="py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+            <h1 class="text-4xl font-bold mb-4">Simple, Transparent Pricing</h1>
+            <p class="text-xl text-gray-600 dark:text-gray-300">Choose the plan that works for you</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Free -->
+            <div class="p-8 bg-white dark:bg-surface-800 rounded-xl border border-gray-200 dark:border-gray-700">
+                <h3 class="text-xl font-bold mb-2">Free</h3>
+                <div class="text-4xl font-bold mb-4">$0<span class="text-lg text-gray-500">/mo</span></div>
+                <p class="text-gray-600 dark:text-gray-400 mb-6">For individuals getting started</p>
+                <ul class="space-y-3 mb-8">
+                    <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> 100 operations/month</li>
+                    <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Basic features</li>
+                    <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Community support</li>
+                </ul>
+                <a href="/signup?plan=free" class="block text-center py-3 border border-brand-500 text-brand-500 rounded-lg hover:bg-brand-50 dark:hover:bg-brand-900/20">
+                    Get Started
+                </a>
+            </div>
+
+            <!-- Pro -->
+            <div class="p-8 bg-brand-500 text-white rounded-xl relative">
+                <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-yellow-400 text-black text-sm font-semibold px-3 py-1 rounded-full">
+                    Most Popular
+                </div>
+                <h3 class="text-xl font-bold mb-2">Pro</h3>
+                <div class="text-4xl font-bold mb-4">$29<span class="text-lg opacity-75">/mo</span></div>
+                <p class="opacity-90 mb-6">For professionals and teams</p>
+                <ul class="space-y-3 mb-8">
+                    <li class="flex items-center"><span class="mr-2">✓</span> 5,000 operations/month</li>
+                    <li class="flex items-center"><span class="mr-2">✓</span> All features</li>
+                    <li class="flex items-center"><span class="mr-2">✓</span> Priority support</li>
+                    <li class="flex items-center"><span class="mr-2">✓</span> API access</li>
+                </ul>
+                <a href="/signup?plan=pro" class="block text-center py-3 bg-white text-brand-500 rounded-lg hover:bg-gray-100 font-semibold">
+                    Start Free Trial
+                </a>
+            </div>
+
+            <!-- Enterprise -->
+            <div class="p-8 bg-white dark:bg-surface-800 rounded-xl border border-gray-200 dark:border-gray-700">
+                <h3 class="text-xl font-bold mb-2">Enterprise</h3>
+                <div class="text-4xl font-bold mb-4">$99<span class="text-lg text-gray-500">/mo</span></div>
+                <p class="text-gray-600 dark:text-gray-400 mb-6">For large organizations</p>
+                <ul class="space-y-3 mb-8">
+                    <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Unlimited operations</li>
+                    <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> All features</li>
+                    <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Dedicated support</li>
+                    <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> SLA guarantee</li>
+                </ul>
+                <a href="/signup?plan=enterprise" class="block text-center py-3 border border-brand-500 text-brand-500 rounded-lg hover:bg-brand-50 dark:hover:bg-brand-900/20">
+                    Contact Sales
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

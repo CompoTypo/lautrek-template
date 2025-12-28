@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block title %}Sign Up | {{ app_name }}{% endblock %}
+
+{% block content %}
+<section class="py-20 px-4">
+    <div class="max-w-md mx-auto">
+        <div class="text-center mb-8">
+            <h1 class="text-3xl font-bold">Create your account</h1>
+            <p class="text-gray-600 dark:text-gray-400 mt-2">Start your free trial today</p>
+        </div>
+
+        <form class="space-y-6 bg-white dark:bg-surface-800 p-8 rounded-xl shadow-sm">
+            <div>
+                <label class="block text-sm font-medium mb-2">Email</label>
+                <input type="email" name="email" required
+                    class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-surface-900 focus:ring-2 focus:ring-brand-500 focus:border-transparent">
+            </div>
+            <div>
+                <label class="block text-sm font-medium mb-2">Password</label>
+                <input type="password" name="password" required
+                    class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-surface-900 focus:ring-2 focus:ring-brand-500 focus:border-transparent">
+                <p class="text-xs text-gray-500 mt-1">Min 8 chars, 1 uppercase, 1 lowercase, 1 number</p>
+            </div>
+            <div>
+                <label class="block text-sm font-medium mb-2">Confirm Password</label>
+                <input type="password" name="confirm_password" required
+                    class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-surface-900 focus:ring-2 focus:ring-brand-500 focus:border-transparent">
+            </div>
+            <div>
+                <label class="block text-sm font-medium mb-3">Plan</label>
+                <div class="grid grid-cols-2 gap-4">
+                    <label class="flex items-center p-4 border rounded-lg cursor-pointer hover:border-brand-500">
+                        <input type="radio" name="plan" value="free" checked class="text-brand-500">
+                        <span class="ml-2">Free</span>
+                    </label>
+                    <label class="flex items-center p-4 border rounded-lg cursor-pointer hover:border-brand-500">
+                        <input type="radio" name="plan" value="pro" class="text-brand-500">
+                        <span class="ml-2">Pro ($29/mo)</span>
+                    </label>
+                </div>
+            </div>
+            <button type="submit" class="w-full bg-brand-500 text-white py-3 rounded-lg font-semibold hover:bg-brand-600">
+                Create Account
+            </button>
+            <p class="text-xs text-center text-gray-500">
+                By signing up, you agree to our <a href="/terms" class="text-brand-500">Terms</a> and <a href="/privacy" class="text-brand-500">Privacy Policy</a>
+            </p>
+        </form>
+
+        <p class="text-center mt-6 text-gray-600 dark:text-gray-400">
+            Already have an account? <a href="/login" class="text-brand-500 hover:underline">Sign in</a>
+        </p>
+    </div>
+</section>
+{% endblock %}
